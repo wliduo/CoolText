@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <!-- BootStrap设计的页面支持响应式的 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>HTML5火焰文字特效DEMO演示</title> -->
+    <title>07-炫酷文字特效</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    <!-- Icons --><link rel="shortcut icon" href="/assets/favicon.ico">
+  </head>
+
+  <body>
+    <div id="canvasContainer"></div>
+    <span id="textInputSpan">
+    </span>
+    
+    <script>
+      var msg = ['我根本不知道', '我将来想要过', '什么样的生活', '去哪个城市', '做什么工作', 
+        '我只是知道', '我自己不想要什么', '我不想要那种', '循规蹈矩安安分分', '平平淡淡的日子',
+        '不想要一个一眼', '就可以看到死的生活'];
+      var i = 0;
+      
+      setInterval(function(){ 
+        currentText = msg[i];
+        clearTimeoutsAndIntervals();
+        animating = false;
+        setTimeout(commitResize, 100);
+        i++;
+        if(i == msg.length){
+          i = 0;
+        }
+      }, 2000);
+    </script>
+    <script src="js/index.js"></script>
+  </body>
+
+</html>

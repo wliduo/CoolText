@@ -1,0 +1,10 @@
+body {
+  background: #eee;
+}
+
+.demo-text {
+  color: #db5a6b;
+  font-size: 4em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}

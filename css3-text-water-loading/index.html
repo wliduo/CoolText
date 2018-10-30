@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <!-- BootStrap设计的页面支持响应式的 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title>HTML5/CSS3 Loading动画DEMO演示</title> -->
+  <title>04-炫酷文字特效</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background: #141414;
+      }
+
+      .loading {
+        text-transform: uppercase;
+        font-family: 'Cabin Condensed', sans-serif;
+        font-weight: bold;
+        font-size: 6em;
+        text-align: center;
+        height: 120px;
+        line-height: 110px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        bottom: 0;
+        display: block;
+      }
+
+      .loading-2 {
+        top: 300px;
+        width: 473px;
+        height: 97px;
+        font-size: 0;
+        background: rgba(255, 255, 255, 0.06);
+        margin: 0 auto;
+      }
+
+      .ff {
+        position: absolute;
+        font-size: 8pt;
+        top: -20px;
+        color: white;
+        line-height: 12pt;
+      }
+
+      .loading-2-text {
+        background-image: url("css/cZc1otp.png");
+        width: 473px;
+        height: 97px;
+        display: inline-block;
+      }
+
+      @keyframes wave-animation {
+        0% {
+          background-position: 0 bottom;
+        }
+
+        100% {
+          background-position: 200px bottom;
+        }
+      }
+      @keyframes loading-animation {
+        0% {
+          background-size: 200px 0px;
+        }
+
+        100% {
+          background-size: 200px 200px;
+        }
+      }
+      .wave {
+        background-image: url("css/uFpLbYt.png");
+        -moz-background-clip: text;
+        -o-background-clip: text;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0px 0px rgba(128, 255, 255, 0.06);
+        animation: wave-animation 1s infinite linear, loading-animation 10s infinite linear alternate;
+        background-size: 200px 100px;
+        background-repeat: repeat-x;
+        opacity: 1;
+      }
+
+      .wave-2 {
+        -moz-background-clip: initial;
+        -o-background-clip: initial;
+        -webkit-background-clip: initial;
+        background-clip: initial;
+        display: inline-block;
+      }
+
+      </style>
+      <!-- Icons --><link rel="shortcut icon" href="/assets/favicon.ico">
+    <script src="js/prefixfree.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+      <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px;">
+        <div class="loading wave">
+            生活喜欢玩我～
+        </div>
+      </div>
+    </div>
+
+    <script >
+        // 检测是否是手机查看
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            // 跳转移动端页面
+            // alert("检测到是手机预览，横屏或者电脑体验更佳哦∩_∩");
+            var loading = document.getElementsByClassName("loading")[0];
+            loading.style.fontSize = "4em";
+        }
+      </script>
+</body>
+
+</html>

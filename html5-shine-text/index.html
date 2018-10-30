@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <!-- <title>[CSS3] Neon Glow - CodePen</title> -->
+    <title>08-炫酷文字特效</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    <!-- Icons --><link rel="shortcut icon" href="/assets/favicon.ico">
+  </head>
+
+  <body>
+    <div id="container">
+
+      <p><a href="#">
+        生活就是五颜六色的～
+      </a></p>
+
+      <p><a href="#">
+        RED
+      </a></p>
+
+      <p><a href="#">
+        BLUE
+      </a></p>
+
+      <p><a href="#">
+        Yellow
+      </a></p>
+
+      <p><a href="#">
+        GREEN
+      </a></p>
+
+      <p><a href="#">
+        ORANGE
+      </a></p>
+
+      <p><a href="#">
+        VIOLET
+      </a></p>
+
+    </div>
+
+    <script >
+      var a = document.getElementsByTagName("a");
+      a[0].style.webkitAnimation = "neon6 1.5s ease-in-out infinite alternate";
+      a[0].style.mozAnimation = "neon6 1.5s ease-in-out infinite alternate";
+      a[0].style.animation = "neon6 1.5s ease-in-out infinite alternate";
+      
+      var i = 0;
+      var order = 0;
+      setInterval(function(){ 
+        a[0].style.webkitAnimation = "none";
+        a[0].style.mozAnimation = "none";
+        a[0].style.animation = "none";
+        if(order == 0){
+          i++;
+        }else{
+          i--;
+        }
+        if(i > 6){
+          order = 1;
+        }
+        if(i < 1){
+          order = 0;
+        }
+        if(i == 0){
+          a[0].style.color = "#B6FF00";
+        }
+        if(i == 1){
+          a[0].style.color = "#FF1177";
+        }
+        if(i == 2){
+          a[0].style.color = "#228DFF";
+        }
+        if(i == 3){
+          a[0].style.color = "#FFDD1B";
+        }
+        if(i == 4){
+          a[0].style.color = "#B6FF00";
+        }
+        if(i == 5){
+          a[0].style.color = "#FF9900";
+        }
+        if(i == 6){
+          a[0].style.color = "#BA01FF";
+        }
+        if(i == 7){
+          a[0].style.color = "#FFDD1B";
+        }
+        setTimeout(function(){ 
+          a[0].style.webkitAnimation = "neon6 1.5s ease-in-out infinite alternate";
+          a[0].style.mozAnimation = "neon6 1.5s ease-in-out infinite alternate";
+          a[0].style.animation = "neon6 1.5s ease-in-out infinite alternate";
+        }, 500);
+      }, 1000);
+    
+      </script>
+  </body>
+
+</html>

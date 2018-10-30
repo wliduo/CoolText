@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--BootStrap设计的页面支持响应式的 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+        <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+			body {background: #CFCFCF;}
+			canvas {
+			background: #000;
+			}
+		</style>
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+	   
+        <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px;">
+            <canvas id="MyCanvas">
+                不支持HTML5画布
+            </canvas>
+        </div>
+    <script type="text/javascript">
+        // 获取canvas对象
+        var cans = document.getElementById("MyCanvas"); 
+        var ctx = cans.getContext("2d");    
+        // 设置字体样式
+        ctx.font = "30px Arial";
+        // 设置对其方式
+        ctx.textAlign = "center";     
+        // 定义透明度相关信息
+        var sum = 1,ibl = true;
+        setInterval(function(){
+            // 清除画布
+            ctx.clearRect(0,0,350,200);
+            // 设置内容颜色
+            ctx.fillStyle = "rgba(255,255,255," + sum + ")";
+            // 设置内容
+            ctx.fillText("Hello World",150,80);
+
+            if(ibl){            
+                sum < 0 ? (ibl = false) : (sum = sum - 0.1);
+            }else{
+                sum > 1 ? (ibl = true) : (sum = sum + 0.1);
+            }
+        },100);
+    </script>
+</body>
+</html>

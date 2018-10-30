@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- BootStrap设计的页面支持响应式的 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>HTML5/CSS3 3D文字特效 文字外翻效果演示地址</title> -->
+    <title>05-炫酷文字特效</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body{
+        font-family: 'Lato', sans-serif;
+        background: #eee;
+      }
+      
+      .letter{
+        display: inline-block;
+        font-weight: 900;
+        font-size: 4em;
+        margin: 0.2em;
+        position: relative;
+        color: rgba(72, 233, 85, 0.918);
+        transform-style: preserve-3d;
+        perspective: 400;
+        z-index: 1;
+      }
+
+      .letter:before, .letter:after{
+        position:absolute;
+        content: attr(data-letter);
+        transform-origin: top left;
+        top:0;
+        left:0;
+      }
+
+      .letter, .letter:before, .letter:after{
+        transition: all 0.3s ease-in-out;
+      }
+
+      .letter:before{
+        color: rgb(25, 114, 216);
+        text-shadow: 
+          -1px 0px 1px rgba(255,255,255,.8),
+          1px 0px 1px rgba(0,0,0,.8);
+        z-index: 3;
+        transform:
+          rotateX(0deg)
+          rotateY(-15deg)
+          rotateZ(0deg);
+      }
+      .letter:after{
+        color: rgba(0,0,0,.11);
+        z-index:2;
+        transform:
+          scale(1.08,1)
+          rotateX(0deg)
+          rotateY(0deg)
+          rotateZ(0deg)
+          skew(0deg,1deg);
+      }
+
+      .letter:hover:before{
+        color: #fafafa;
+        transform:
+          rotateX(0deg)
+          rotateY(-40deg)
+          rotateZ(0deg);
+      }
+      
+      .letter:hover:after{
+        transform:
+          scale(1.08,1)
+          rotateX(0deg)
+          rotateY(40deg)
+          rotateZ(0deg)
+          skew(0deg,22deg);
+      }
+    </style>
+    <!-- Icons --><link rel="shortcut icon" href="/assets/favicon.ico">
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+  <div class="container">
+      <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px;">
+        <div class="foo">
+          <!-- <span class="letter" data-letter="A">A</span>
+          <span class="letter" data-letter="B">B</span>
+          <span class="letter" data-letter="C">C</span>
+          <span class="letter" data-letter="D">D</span>
+          <span class="letter" data-letter="E">E</span>
+          <span class="letter" data-letter="F">F</span>
+          <span class="letter" data-letter="G">G</span>
+          <span class="letter" data-letter="H">H</span>
+          <span class="letter" data-letter="I">I</span>
+          <span class="letter" data-letter="L">L</span>
+          <span class="letter" data-letter="M">M</span>
+          <span class="letter" data-letter="N">N</span>
+          <span class="letter" data-letter="O">O</span>
+          <span class="letter" data-letter="P">P</span>
+          <span class="letter" data-letter="Q">Q</span>
+          <span class="letter" data-letter="R">R</span>
+          <span class="letter" data-letter="S">S</span>
+          <span class="letter" data-letter="T">T</span>
+          <span class="letter" data-letter="U">U</span>
+          <span class="letter" data-letter="V">V</span>
+          <span class="letter" data-letter="Z">Z</span> -->
+          <span class="letter" data-letter="你">你</span>
+          <span class="letter" data-letter="呢">呢</span>
+          <span class="letter" data-letter="，">，</span>
+          <span class="letter" data-letter="要">要</span>
+          <span class="letter" data-letter="做">做</span>
+          <span class="letter" data-letter="一">一</span>
+          <span class="letter" data-letter="个">个</span>
+          <span class="letter" data-letter="帅">帅</span>
+          <span class="letter" data-letter="气">气</span>
+          <span class="letter" data-letter="的">的</span>
+          <span class="letter" data-letter="男">男</span>
+          <span class="letter" data-letter="孩">孩</span>
+          <span class="letter" data-letter="，">，</span>
+          <span class="letter" data-letter="要">要</span>
+          <span class="letter" data-letter="敢">敢</span>
+          <span class="letter" data-letter="爱">爱</span>
+          <span class="letter" data-letter="敢">敢</span>
+          <span class="letter" data-letter="恨">恨</span>
+          <span class="letter" data-letter="，">，</span>
+          <span class="letter" data-letter="一">一</span>
+          <span class="letter" data-letter="生">生</span>
+          <span class="letter" data-letter="坦">坦</span>
+          <span class="letter" data-letter="荡">荡</span>
+          <span class="letter" data-letter="，">，</span>
+          <span class="letter" data-letter="不">不</span>
+          <span class="letter" data-letter="要">要</span>
+          <span class="letter" data-letter="睡">睡</span>
+          <span class="letter" data-letter="得">得</span>
+          <span class="letter" data-letter="太">太</span>
+          <span class="letter" data-letter="晚">晚</span>
+          <span class="letter" data-letter="，">，</span>
+          <span class="letter" data-letter="也">也</span>
+          <span class="letter" data-letter="不">不</span>
+          <span class="letter" data-letter="要">要</span>
+          <span class="letter" data-letter="爱">爱</span>
+          <span class="letter" data-letter="的">的</span>
+          <span class="letter" data-letter="太">太</span>
+          <span class="letter" data-letter="满">满</span>
+          <span class="letter" data-letter="，">，</span>
+          <span class="letter" data-letter="晚">晚</span>
+          <span class="letter" data-letter="安">安</span>
+          <span class="letter" data-letter="～">～</span>
+        </div>
+    </div>
+  </div>
+  <script >
+    // 检测是否是手机查看
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        // 跳转移动端页面
+        // alert("检测到是手机预览，横屏或者电脑体验更佳哦∩_∩");
+        var letter = document.getElementsByClassName("letter");
+        for(i=0; i<letter.length; i++){
+          letter[i].style.fontSize = "2em";
+          letter[i].style.transform = "scale(1.08,1)";
+        }
+        // letter.style.fontSize = "3em";
+        var container = document.getElementsByClassName("container")[0];
+        container.style.paddingRight = "0px";
+        container.style.paddingLeft = "20px";
+    }
+
+    var letter = document.getElementsByClassName("letter");
+    var i = 0;
+    var order = 0;
+    setInterval(function(){ 
+      if(order == 0){
+        letter[i].style.transform = "skew(0deg, 20deg)";
+      }
+      if(order == 1){
+        letter[i].style.transform = "skew(0deg, -20deg)";
+      }
+      i++;
+      if(i == letter.length){
+        i = 0;
+        if(order == 0){
+          order = 1;
+        }else{
+          order = 0;
+        }
+      }
+    }, 300);
+
+  </script>
+  <script src='js/jquery.js'></script>
+</body>
+
+</html>

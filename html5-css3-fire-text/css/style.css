@@ -1,0 +1,17 @@
+html, body{
+  width : 100%;
+  height : 100%;
+  overflow: hidden;
+  background-color: #11a7bb;
+  font-family: sans-serif;
+}
+
+#canvasContainer{
+  width : 100%;
+  height : 100%;
+}
+
+#textInputSpan{
+  position: absolute;
+  font-family: sans-serif;
+}
