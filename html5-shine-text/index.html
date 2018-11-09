@@ -57,25 +57,17 @@
       a[0].style.mozAnimation = "neon6 1.5s ease-in-out infinite alternate";
       a[0].style.animation = "neon6 1.5s ease-in-out infinite alternate";
       
-      var i = 0;
+      var i = 1;
       var order = 0;
       setInterval(function(){ 
         a[0].style.webkitAnimation = "none";
         a[0].style.mozAnimation = "none";
         a[0].style.animation = "none";
-        if(order == 0){
-          i++;
-        }else{
-          i--;
-        }
-        if(i > 6){
+        if(i == 6){
           order = 1;
         }
-        if(i < 1){
+        if(i == 1){
           order = 0;
-        }
-        if(i == 0){
-          a[0].style.color = "#B6FF00";
         }
         if(i == 1){
           a[0].style.color = "#FF1177";
@@ -95,8 +87,10 @@
         if(i == 6){
           a[0].style.color = "#BA01FF";
         }
-        if(i == 7){
-          a[0].style.color = "#FFDD1B";
+        if(order == 0){
+          i++;
+        }else{
+          i--;
         }
         setTimeout(function(){ 
           a[0].style.webkitAnimation = "neon6 1.5s ease-in-out infinite alternate";
