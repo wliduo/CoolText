@@ -1,59 +1,152 @@
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-        <title></title>
-        <!-- Icons --><link rel="shortcut icon" href="https://wang64.cn/static/favicon.ico">
-        <script>
-            var _hmt = _hmt || [];
-            (function() {
-                var hm = document.createElement("script");
-                hm.src = "https://hm.baidu.com/hm.js?1826dd4e676f6c917705c5632139f6dd";
-                var s = document.getElementsByTagName("script")[0]; 
-                s.parentNode.insertBefore(hm, s);
-            })();
-        </script>
-	</head>
-	<body>
-    <script type="text/javascript">
-    // 检测是否是手机查看
-    var sUserAgent = navigator.userAgent.toLowerCase();
-        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-        var bIsAndroid = sUserAgent.match(/android/i) == "android";
-        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-            // 跳转移动端页面
-            var urlTextArray = ['https://text.wang64.cn/css3-colorful-text-shadow',
-                  'https://text.wang64.cn/css3-loading-text-animation',
-                  'https://text.wang64.cn/css3-text-shadow-animation',
-                  'https://text.wang64.cn/css3-text-water-loading',
-                  'https://text.wang64.cn/html5-3d-letter-text',
-                  'https://text.wang64.cn/css3-colorful-text-shadow',
-                  'https://text.wang64.cn/html5-css3-fire-text',
-                  'https://text.wang64.cn/html5-shine-text',
-                  'https://text.wang64.cn/html5-swing-text',
-                  'https://text.wang64.cn/css3-colorful-text-shadow'];
-		        window.location.href = urlTextArray[parseInt(Math.floor(Math.random()*10))];
-        }else{
-            var urlTextArray = ['https://text.wang64.cn/css3-colorful-text-shadow',
-                  'https://text.wang64.cn/css3-loading-text-animation',
-                  'https://text.wang64.cn/css3-text-shadow-animation',
-                  'https://text.wang64.cn/css3-text-water-loading',
-                  'https://text.wang64.cn/html5-3d-letter-text',
-                  'https://text.wang64.cn/css3-colorful-text-shadow',
-                  'https://text.wang64.cn/html5-css3-fire-text',
-                  'https://text.wang64.cn/html5-shine-text',
-                  'https://text.wang64.cn/html5-swing-text',
-                  'https://text.wang64.cn/html5-text-pixel'];
-		        window.location.href = urlTextArray[parseInt(Math.floor(Math.random()*10))];
-        }
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <title>文字特效</title>
+  <link rel="shortcut icon" href="https://wang64.cn/static/favicon.ico" />
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Monoton';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Monoton'), local('Monoton-Regular'), url(https://text.wang64.cn/html5-shine-text/css/font/01.woff) format('woff');
+    }
+
+    @font-face {
+      font-family: 'Pacifico';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://text.wang64.cn/html5-shine-text/css/font/03.woff) format('woff');
+    }
+
+    @font-face {
+      font-family: 'Audiowide';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Audiowide'), local('Audiowide-Regular'), url(https://text.wang64.cn/html5-shine-text/css/font/05.woff) format('woff');
+    }
+
+    @font-face {
+      font-family: 'Vampiro One';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Vampiro One'), local('VampiroOne-Regular'), url(https://text.wang64.cn/html5-shine-text/css/font/06.woff) format('woff');
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0; 
+        padding: 0;
+    }
+
+    body {
+      background-image: url(https://wang926454.gitee.io/reader/Image/201811/normal/09010.png);
+      /* background-color: #2e2e31; */
+      /* 隐藏滚动条 */
+      overflow: hidden;
+    }
+
+    #text {
+      text-align: center;
+      font-size: 2em;
+      color: #FF1177;
+      font-family: Monoton;
+    }
+
+    .middle {
+      position: relative;
+      top: 40%;
+      transform: translateY(-40%);
+    }
     
+  </style>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1826dd4e676f6c917705c5632139f6dd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="middle">
+      <div>
+        <div style="margin: 0px auto; display: table;">
+            <p id="text">CoolText</p>
+        </div>
+      </div>
     
-    </script>
+      <div style="margin-top: 20px;">
+        <div style="margin: 0px auto; display: table;">
+            <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+            <button type="button" class="btn btn-primary" id="01" onclick="list(0)">01</button> | 
+            <!-- 表示一个成功的或积极的动作 -->
+            <button type="button" class="btn btn-success" id="02" onclick="list(1)">02</button> | 
+            <!-- 信息警告消息的上下文按钮 -->
+            <button type="button" class="btn btn-info" id="03" onclick="list(2)">03</button> | 
+            <!-- 标准的按钮 -->
+            <button type="button" class="btn btn-default" id="04" onclick="list(3)">04</button> | 
+            <!-- 表示应谨慎采取的动作 -->
+            <button type="button" class="btn btn-warning" id="05" onclick="list(4)">05</button> | 
+            <!-- 表示一个危险的或潜在的负面动作 -->
+            <button type="button" class="btn btn-danger" id="06" onclick="list(5)">06</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <div style="margin: 0px auto; display: table;">
+            <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+            <button type="button" class="btn btn-primary active btn-lg" id="07" onclick="list(6)">07</button> | 
+            <!-- 表示一个成功的或积极的动作 -->
+            <button type="button" class="btn btn-success active" id="08" onclick="list(7)">08</button> | 
+            <!-- 信息警告消息的上下文按钮 -->
+            <button type="button" class="btn btn-info active" id="09" onclick="list(8)">09</button> | 
+            <!-- 表示应谨慎采取的动作 -->
+            <button type="button" class="btn btn-warning active" id="10" onclick="list(9)">10</button> | 
+            <!-- 表示一个危险的或潜在的负面动作 -->
+            <button type="button" class="btn btn-danger active btn-lg" id="11" onclick="list(10)">11</button>
+        </div>
+        </div>
+
+  </div>
+
+  <script>
+    var urlTextArray = ['https://text.wang64.cn/css3-colorful-text-shadow',
+                'https://text.wang64.cn/css3-loading-text-animation',
+                'https://text.wang64.cn/css3-text-shadow-animation',
+                'https://text.wang64.cn/css3-text-water-loading',
+                'https://text.wang64.cn/html5-3d-letter-text',
+                'https://text.wang64.cn/html5-css3-3d-text',
+                'https://text.wang64.cn/html5-css3-fire-text',
+                'https://text.wang64.cn/html5-shine-text',
+                'https://text.wang64.cn/html5-swing-text',
+                'https://text.wang64.cn/html5-text-pixel',
+                'https://text.wang64.cn/text-auto-type'];
+
+    function list(i){
+        window.open(urlTextArray[i]);
+    }
+
+    // 文字特效
+    var colors = ['#FF1177','#228DFF','#FFDD1B','#B6FF00','#FF9900','#BA01FF'];
+    var fonts = ['Pacifico','Audiowide','Vampiro One'];
+    var text = document.getElementById("text");
+    // 推荐使用setTimeout
+    setTimeout(function () {
+      text.style.color = colors[Math.floor(colors.length * Math.random())];
+      text.style.fontFamily = fonts[Math.floor(fonts.length * Math.random())];
+      setTimeout(arguments.callee, 1000);
+    }, 1000);
+  </script>
 </body>
+
 </html>
