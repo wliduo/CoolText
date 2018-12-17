@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>12-炫酷文字特效</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap-theme.css">
@@ -30,8 +30,9 @@
         }
 
         .func {
-            color: #5988ff;
+            color: #2d61e2;
         }
+
         #source, #output-wrap {
             height: 160px;
             background: #282828;
@@ -40,7 +41,22 @@
             font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
             font-size: 18px;
             line-height: 26px;
+        }
 
+        @media screen and (max-width: 650px) {
+            #source, #output-wrap {
+                font-size: 16px;
+            }
+        }
+        @media screen and (max-width: 550px) {
+            #source, #output-wrap {
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width: 430px) {
+            #source, #output-wrap {
+                font-size: 12px;
+            }
         }
     </style>
     <script src="js/typing.js"></script>
@@ -58,12 +74,28 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12" style="display: none;">
+            <!-- <div class="col-md-12 col-sm-12 col-xs-12" style="display: none;">
                 <div id="source">
                     <span class="func">Set</span>(<span class="string">'hello world!'</span>, <span class="keyword">out</span> msg);<br>
                     writeline(msg);<br>
                     ---------------------------<br>
                     <span class="info">hello world!</span>
+                </div>
+            </div> -->
+            <div class="col-md-12 col-sm-12 col-xs-12" style="display: none;">
+                <div id="source">
+                    HelloWorld.java<br>
+                    ------------------------------------------<br>
+                    <span class="func">public class </span><span class="string">HelloWorld </span>{<br>
+                    <span class="func">&nbsp;&nbsp;public static </span>void <span class="info">main</span>(String[] <span class="string">args</span>) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="info">System.out.println</span>("<span class="string">Hello World</span>");<br>
+                    &nbsp;&nbsp;}<br>
+                    }<br>
+                    ------------------------------------------<br>
+                    > <span class="keyword">javac HelloWorld.java</span><br>
+                    > <span class="keyword">java HelloWorld</span><br>
+                    > <span class="info">Hello World</span><br>
+                    > 
                 </div>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12">
