@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>12-炫酷文字特效</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/typing.css">
+    <!-- Icons --><link rel="shortcut icon" href="https://wang64.cn/static/favicon.ico">
+    <style>
+		body {
+			background: #282828;
+		}
+        .row {
+            margin-top: 12px;
+        }
+
+        .keyword {
+            color: #3ffc19;
+        }
+
+        .string {
+            color: #f2ea0e;
+        }
+
+        .info {
+            color: #ff4242;
+        }
+
+        .func {
+            color: #5988ff;
+        }
+        #source, #output-wrap {
+            height: 160px;
+            background: #282828;
+            color: #fff;
+            padding: 20px;
+            font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+            font-size: 18px;
+            line-height: 26px;
+
+        }
+    </style>
+    <script src="js/typing.js"></script>
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?1826dd4e676f6c917705c5632139f6dd";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</head>
+<!-- 源码 https://github.com/coffeedeveloper/typing.js -->
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12" style="display: none;">
+                <div id="source">
+                    <span class="func">Set</span>(<span class="string">'hello world!'</span>, <span class="keyword">out</span> msg);<br>
+                    writeline(msg);<br>
+                    ---------------------------<br>
+                    <span class="info">hello world!</span>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div id="output-wrap">
+                    <span id="output"></span>
+                    <span class="typing-cursor-white">|</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var typing = new Typing({
+            source: document.getElementById('source'),
+            output: document.getElementById('output'),
+            delay: 30
+        });
+        typing.start();
+    </script>
+</body>
+</html>
