@@ -2,7 +2,6 @@
 <html>
 
 <head>
-
   <meta charset="UTF-8">
   <!-- BootStrap设计的页面支持响应式的 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,17 +94,8 @@
         display: inline-block;
       }
 
-      </style>
-      <!-- Icons --><link rel="shortcut icon" href="https://wang64.cn/static/favicon.ico">
-      <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?1826dd4e676f6c917705c5632139f6dd";
-            var s = document.getElementsByTagName("script")[0]; 
-            s.parentNode.insertBefore(hm, s);
-        })();
-      </script>
+    </style>
+    <!-- Icons --><link rel="shortcut icon" href="https://wang64.cn/static/favicon.ico">
     <script src="js/prefixfree.min.js"></script>
 </head>
 
@@ -119,23 +109,24 @@
     </div>
 
     <script >
-        // 检测是否是手机查看
-        var sUserAgent = navigator.userAgent.toLowerCase();
-        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-        var bIsAndroid = sUserAgent.match(/android/i) == "android";
-        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-            // 跳转移动端页面
-            // alert("检测到是手机预览，横屏或者电脑体验更佳哦∩_∩");
-            var loading = document.getElementsByClassName("loading")[0];
-            loading.style.fontSize = "4em";
-        }
-      </script>
+      // 检测是否是手机查看
+      var sUserAgent = navigator.userAgent.toLowerCase();
+      var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+      var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+      var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+      var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+      var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+      var bIsAndroid = sUserAgent.match(/android/i) == "android";
+      var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+      var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+      if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        // 跳转移动端页面
+        // alert("检测到是手机预览，横屏或者电脑体验更佳哦∩_∩");
+        var loading = document.getElementsByClassName("loading")[0];
+        loading.style.fontSize = "4em";
+      }
+    </script>
+    <script type="text/javascript" src="https://wang64.cn/static/count.js"></script>
 </body>
 
 </html>

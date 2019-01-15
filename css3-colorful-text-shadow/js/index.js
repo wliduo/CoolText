@@ -18,7 +18,7 @@ if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE 
     container.style.paddingLeft = "15px";
 }
 
-function start(){
+function start() {
   var box = document.querySelector('.box').textContent,
     rs = document.querySelector('.render'),
     f = [

@@ -35,7 +35,7 @@ var maxX = screen.width;
 var maxY = screen.height;
 var order = 0;
 
-function getXY(){
+function getXY() {
   if(x >= screen.width){
     order = 1;
   }

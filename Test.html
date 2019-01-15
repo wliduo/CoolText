@@ -16,36 +16,34 @@
 		</style>
 	</head>
 	<body>
-	   
         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px;">
             <canvas id="MyCanvas">
                 不支持HTML5画布
             </canvas>
         </div>
-    <script type="text/javascript">
-        // 获取canvas对象
-        var cans = document.getElementById("MyCanvas"); 
-        var ctx = cans.getContext("2d");    
-        // 设置字体样式
-        ctx.font = "30px Arial";
-        // 设置对其方式
-        ctx.textAlign = "center";     
-        // 定义透明度相关信息
-        var sum = 1,ibl = true;
-        setInterval(function(){
-            // 清除画布
-            ctx.clearRect(0,0,350,200);
-            // 设置内容颜色
-            ctx.fillStyle = "rgba(255,255,255," + sum + ")";
-            // 设置内容
-            ctx.fillText("Hello World",150,80);
-
-            if(ibl){            
-                sum < 0 ? (ibl = false) : (sum = sum - 0.1);
-            }else{
-                sum > 1 ? (ibl = true) : (sum = sum + 0.1);
-            }
-        },100);
-    </script>
-</body>
+        <script type="text/javascript">
+            // 获取canvas对象
+            var cans = document.getElementById("MyCanvas"); 
+            var ctx = cans.getContext("2d");    
+            // 设置字体样式
+            ctx.font = "30px Arial";
+            // 设置对其方式
+            ctx.textAlign = "center";     
+            // 定义透明度相关信息
+            var sum = 1,ibl = true;
+            setInterval(function(){
+                // 清除画布
+                ctx.clearRect(0,0,350,200);
+                // 设置内容颜色
+                ctx.fillStyle = "rgba(255,255,255," + sum + ")";
+                // 设置内容
+                ctx.fillText("Hello World",150,80);
+                if(ibl){            
+                    sum < 0 ? (ibl = false) : (sum = sum - 0.1);
+                }else{
+                    sum > 1 ? (ibl = true) : (sum = sum + 0.1);
+                }
+            },100);
+        </script>
+    </body>
 </html>

@@ -11,15 +11,6 @@
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
     <!-- Icons --><link rel="shortcut icon" href="https://wang64.cn/static/favicon.ico">
-    <script>
-      var _hmt = _hmt || [];
-      (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?1826dd4e676f6c917705c5632139f6dd";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
   </head>
 
   <body>
@@ -166,17 +157,18 @@
       var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
       var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
       if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-          // 跳转移动端页面
-          // alert("检测到是手机预览，横屏或者电脑体验更佳哦∩_∩");
-          var loader = document.getElementsByClassName("loader");
-          for(i=0; i<loader.length; i++){
-            loader[i].style.fontSize = "20px";
-          }
-          var container = document.getElementsByClassName("container")[0];
-          // container.style.paddingRight = "10px";
-          // container.style.paddingLeft = "10px";
+        // 跳转移动端页面
+        // alert("检测到是手机预览，横屏或者电脑体验更佳哦∩_∩");
+        var loader = document.getElementsByClassName("loader");
+        for(i=0; i<loader.length; i++){
+          loader[i].style.fontSize = "20px";
+        }
+        var container = document.getElementsByClassName("container")[0];
+        // container.style.paddingRight = "10px";
+        // container.style.paddingLeft = "10px";
       }
     </script>
+    <script type="text/javascript" src="https://wang64.cn/static/count.js"></script>
   </body>
 
 </html>

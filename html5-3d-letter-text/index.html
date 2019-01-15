@@ -78,15 +78,6 @@
       }
     </style>
     <!-- Icons --><link rel="shortcut icon" href="https://wang64.cn/static/favicon.ico">
-    <script>
-      var _hmt = _hmt || [];
-      (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?1826dd4e676f6c917705c5632139f6dd";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
     <script src="js/prefixfree.min.js"></script>
     <script src="js/modernizr.js"></script>
 </head>
@@ -173,17 +164,17 @@
     var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-        // 跳转移动端页面
-        // alert("检测到是手机预览，横屏或者电脑体验更佳哦∩_∩");
-        var letter = document.getElementsByClassName("letter");
-        for(i=0; i<letter.length; i++){
-          letter[i].style.fontSize = "2em";
-          letter[i].style.transform = "scale(1.08,1)";
-        }
-        // letter.style.fontSize = "3em";
-        var container = document.getElementsByClassName("container")[0];
-        container.style.paddingRight = "0px";
-        container.style.paddingLeft = "20px";
+      // 跳转移动端页面
+      // alert("检测到是手机预览，横屏或者电脑体验更佳哦∩_∩");
+      var letter = document.getElementsByClassName("letter");
+      for(i=0; i<letter.length; i++){
+        letter[i].style.fontSize = "2em";
+        letter[i].style.transform = "scale(1.08,1)";
+      }
+      // letter.style.fontSize = "3em";
+      var container = document.getElementsByClassName("container")[0];
+      container.style.paddingRight = "0px";
+      container.style.paddingLeft = "20px";
     }
 
     var letter = document.getElementsByClassName("letter");
@@ -209,6 +200,7 @@
 
   </script>
   <script src='js/jquery.js'></script>
+  <script type="text/javascript" src="https://wang64.cn/static/count.js"></script>
 </body>
 
 </html>
