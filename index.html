@@ -46,11 +46,30 @@
     }
 
     body {
-      background-image: url(https://wang926454.gitee.io/reader/Image/201811/normal/09010.png);
       /* background-color: #2e2e31; */
       /* 隐藏滚动条 */
       overflow: hidden;
     }
+
+    #bg {
+      background-image: url(https://wang926454.gitee.io/reader/Image/201811/origin/02020.png);
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			min-width: 1000px;
+			z-index: -10;
+			zoom: 1;
+      opacity: 0.95;
+      filter: alpha(opacity = 95);
+			background-color: #000;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-o-background-size: cover;
+			background-position: center 0;
+		}
 
     #text {
       text-align: center;
@@ -69,6 +88,9 @@
 </head>
 
 <body>
+  <!--背景图片-->
+  <div id="bg"></div>
+
   <div class="middle">
       <div>
         <div style="margin: 0px auto; display: table;">
