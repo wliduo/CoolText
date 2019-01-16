@@ -7,12 +7,9 @@
 	<!-- lmlblog.com -->
 	<link rel="shortcut icon" href="https://wang64.cn/static/favicon.ico" />
 	<style>
-		body {
+		body{
+			overflow:hidden;
 			background-color:black;
-			/* 隐藏滚动条 */
-			/* overflow: hidden; */
-			/* 鼠标默认显示 */
-			cursor: url(https://note.wang64.cn/images/cursor.ico), auto;
 		}
 	</style>
 	<script src="https://cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
@@ -23,7 +20,7 @@
 			$.fn.snow({
 				minSize: 10,	//雪花的最小尺寸
 				maxSize: 15, 	//雪花的最大尺寸
-				newOn: 500		//雪花出现的频率 这个数值越小雪花越多
+				newOn: 100		//雪花出现的频率 这个数值越小雪花越多
 			});
 		});
 	</script>
