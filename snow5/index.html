@@ -17,6 +17,18 @@
 <body>
     <div id="hovertreesnow"></div>
     <script type="text/javascript" src="snow.js"></script>
+    <script>
+        html2canvas([document.body], {
+            onrendered: function(e) {
+                try {
+                    var snow = detectEdge(e);
+                    snow.flakeCount = 150, Snowflakes.init(snow);
+                } catch (err) {
+                    console.log('[Error] Snow is not defined.');
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

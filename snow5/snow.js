@@ -1701,11 +1701,4 @@ Animation = function() {
     return {
         init: s
     }
-}(), html2canvas([document.body], {
-    onrendered: function(e) {
-        try {
-            var t = detectEdge(e);
-            t.flakeCount = 50, Snowflakes.init(t)
-        } catch (n) {}
-    }
-});
+}();
