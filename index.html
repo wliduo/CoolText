@@ -51,20 +51,11 @@
       overflow: hidden;
     }
 
-    .container {
-      margin: 0;
-      padding: 0;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      /* min-width: 1000px; */
-      z-index: -10;
-      zoom: 1;
-      background-repeat: no-repeat;
-      background-size: cover;
-      -webkit-background-size: cover;
-      -o-background-size: cover;
-      background-position: center 0;
+    canvas {
+      background-color:#000000;
+      position:absolute;
+      top:0px;
+      left:0px;
     }
 
     #text {
@@ -85,7 +76,7 @@
 
 <body>
   <!--背景特效-->
-  <div id="jsi-snow-container" class="container"></div>
+  <canvas id="screen"></canvas>
 
   <div class="middle">
       <div>
@@ -97,63 +88,127 @@
       <div style="margin-top: 20px;">
         <div style="margin: 0px auto; display: table;">
             <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
-            <button type="button" class="btn btn-primary" id="01" onclick="list(0)">01</button> | 
+            <button type="button" class="btn btn-primary" onclick="list(1)">01</button> | 
             <!-- 表示一个成功的或积极的动作 -->
-            <button type="button" class="btn btn-success" id="02" onclick="list(1)">02</button> | 
+            <button type="button" class="btn btn-success" onclick="list(2)">02</button> | 
             <!-- 信息警告消息的上下文按钮 -->
-            <button type="button" class="btn btn-info" id="03" onclick="list(2)">03</button> | 
+            <button type="button" class="btn btn-info" onclick="list(3)">03</button> | 
             <!-- 标准的按钮 -->
-            <button type="button" class="btn btn-default" id="04" onclick="list(3)">04</button> | 
+            <button type="button" class="btn btn-default" onclick="list(4)">04</button> | 
             <!-- 表示应谨慎采取的动作 -->
-            <button type="button" class="btn btn-warning" id="05" onclick="list(4)">05</button> | 
+            <button type="button" class="btn btn-warning" onclick="list(5)">05</button> | 
             <!-- 表示一个危险的或潜在的负面动作 -->
-            <button type="button" class="btn btn-danger" id="06" onclick="list(5)">06</button>
+            <button type="button" class="btn btn-danger" onclick="list(6)">06</button>
         </div>
       </div>
 
       <div style="margin-top: 10px;">
         <div style="margin: 0px auto; display: table;">
             <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
-            <button type="button" class="btn btn-primary active btn-lg" id="07" onclick="list(6)">07</button> | 
+            <button type="button" class="btn btn-success active btn-lg" onclick="list(7)">07</button> | 
             <!-- 表示一个成功的或积极的动作 -->
-            <button type="button" class="btn btn-success active" id="08" onclick="list(7)">08</button> | 
+            <button type="button" class="btn btn-danger active" onclick="list(8)">08</button> | 
             <!-- 信息警告消息的上下文按钮 -->
-            <button type="button" class="btn btn-info active" id="09" onclick="list(8)">09</button> | 
+            <button type="button" class="btn btn-primary active" onclick="list(9)">09</button> | 
             <!-- 表示应谨慎采取的动作 -->
-            <button type="button" class="btn btn-warning active" id="10" onclick="list(9)">10</button> | 
+            <button type="button" class="btn btn-warning active" onclick="list(10)">10</button> | 
             <!-- 表示一个危险的或潜在的负面动作 -->
-            <button type="button" class="btn btn-danger active" id="11" onclick="list(10)">11</button> | 
+            <button type="button" class="btn btn-info active" onclick="list(11)">11</button> | 
             <!-- 标准的按钮 -->
-            <button type="button" class="btn btn-default" id="04" onclick="list(11)">12</button> | 
+            <button type="button" class="btn btn-warning" onclick="list(12)">12</button> | 
             <!-- 表示应谨慎采取的动作 -->
-            <button type="button" class="btn btn-warning  btn-lg" id="05" onclick="list(12)">13</button>
+            <button type="button" class="btn btn-default btn-lg" onclick="list(13)">13</button>
         </div>
       </div>
 
       <div style="margin-top: 10px;">
         <div style="margin: 0px auto; display: table;">
             <!-- 表示应谨慎采取的动作 -->
-            <button type="button" class="btn btn-warning  btn-lg" id="05" onclick="list(13)">14</button> | 
+            <button type="button" class="btn btn-warning btn-lg" onclick="list(14)">14</button> | 
             <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
-            <button type="button" class="btn btn-primary active" id="07" onclick="list(14)">15</button> | 
+            <button type="button" class="btn btn-primary active" onclick="list(15)">15</button> | 
             <!-- 表示应谨慎采取的动作 -->
-            <button type="button" class="btn btn-warning active" id="10" onclick="list(15)">16</button> | 
+            <button type="button" class="btn btn-warning active" onclick="list(16)">16</button> | 
             <!-- 表示一个危险的或潜在的负面动作 -->
-            <button type="button" class="btn btn-danger active" id="11" onclick="list(16)">17</button> | 
+            <button type="button" class="btn btn-danger active" onclick="list(17)">17</button> | 
             <!-- 标准的按钮 -->
-            <button type="button" class="btn btn-default" id="04" onclick="list(17)">18</button> | 
+            <button type="button" class="btn btn-default" onclick="list(18)">18</button> | 
             <!-- 表示一个成功的或积极的动作 -->
-            <button type="button" class="btn btn-success active" id="08" onclick="list(18)">19</button> | 
-             <!-- 信息警告消息的上下文按钮 -->
-             <button type="button" class="btn btn-info active  btn-lg" id="09" onclick="list(19)">20</button>
-            
+            <button type="button" class="btn btn-success active" onclick="list(19)">19</button> | 
+            <!-- 信息警告消息的上下文按钮 -->
+            <button type="button" class="btn btn-info active  btn-lg" onclick="list(20)">20</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <div style="margin: 0px auto; display: table;">
+            <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+            <button type="button" class="btn btn-primary active btn-lg" onclick="list(21)">21</button> | 
+            <!-- 表示一个成功的或积极的动作 -->
+            <button type="button" class="btn btn-success active" onclick="list(22)">22</button> | 
+            <!-- 信息警告消息的上下文按钮 -->
+            <button type="button" class="btn btn-info active" onclick="list(23)">23</button> | 
+            <!-- 表示应谨慎采取的动作 -->
+            <button type="button" class="btn btn-warning active" onclick="list(24)">24</button> | 
+            <!-- 表示一个危险的或潜在的负面动作 -->
+            <button type="button" class="btn btn-danger active" onclick="list(25)">25</button> | 
+            <!-- 标准的按钮 -->
+            <button type="button" class="btn btn-default" onclick="list(26)">26</button> | 
+            <!-- 表示应谨慎采取的动作 -->
+            <button type="button" class="btn btn-warning btn-lg" onclick="list(27)">27</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <div style="margin: 0px auto; display: table;">
+            <!-- 表示应谨慎采取的动作 -->
+            <button type="button" class="btn btn-default btn-lg" onclick="list(28)">28</button> | 
+            <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+            <button type="button" class="btn btn-danger active" onclick="list(29)">29</button> | 
+            <!-- 表示应谨慎采取的动作 -->
+            <button type="button" class="btn btn-warning active" onclick="list(30)">30</button> | 
+            <!-- 表示一个危险的或潜在的负面动作 -->
+            <button type="button" class="btn btn-primary active" onclick="list(31)">31</button> | 
+            <!-- 标准的按钮 -->
+            <button type="button" class="btn btn-default" onclick="list(32)">32</button> | 
+            <!-- 表示一个成功的或积极的动作 -->
+            <button type="button" class="btn btn-info active" onclick="list(33)">33</button> | 
+            <!-- 信息警告消息的上下文按钮 -->
+            <button type="button" class="btn btn-success active  btn-lg" onclick="list(34)">34</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <div style="margin: 0px auto; display: table;">
+            <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+            <button type="button" class="btn btn-warning" onclick="list(35)">35</button> | 
+            <!-- 表示一个成功的或积极的动作 -->
+            <button type="button" class="btn btn-default" onclick="list(36)">36</button> | 
+            <!-- 信息警告消息的上下文按钮 -->
+            <button type="button" class="btn btn-success active" onclick="list(37)">37</button>
         </div>
       </div>
 
   </div>
 
   <script>
-    var urlTextArray = ['https://text.wang64.cn/dandelion',
+    var urlTextArray = ['https://text.wang64.cn/001',
+                'https://text.wang64.cn/002',
+                'https://text.wang64.cn/003',
+                'https://text.wang64.cn/004',
+                'https://text.wang64.cn/005',
+                'https://text.wang64.cn/006',
+                'https://text.wang64.cn/007',
+                'https://text.wang64.cn/008',
+                'https://text.wang64.cn/009',
+                'https://text.wang64.cn/010',
+                'https://text.wang64.cn/011',
+                'https://text.wang64.cn/012',
+                'https://text.wang64.cn/013',
+                'https://text.wang64.cn/014',
+                'https://text.wang64.cn/015',
+                'https://text.wang64.cn/016',
+                'https://text.wang64.cn/dandelion',
                 'https://text.wang64.cn/snow',
                 'https://text.wang64.cn/snow2',
                 'https://text.wang64.cn/snow3',
@@ -172,10 +227,11 @@
                 'https://text.wang64.cn/html5-text-pixel',
                 'https://text.wang64.cn/text-auto-type',
                 'https://text.wang64.cn/typing',
-                'https://text.wang64.cn/NES'];
+                'https://text.wang64.cn/NES',
+                'https://jnicol.github.io/particleground'];
 
     function list(i){
-        window.open(urlTextArray[i]);
+        window.open(urlTextArray[i-1]);
     }
 
     // 文字特效
@@ -190,199 +246,273 @@
     }, 1000);
   </script>
   <script src="https://cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
-  <script>
-      var RENDERER = {
-        SNOW_COUNT: { INIT: 100, DELTA: 1 },
-        BACKGROUND_COLOR: 'hsl(%h, 50%, %l%)',
-        INIT_HUE: 180,
-        DELTA_HUE: 0.1,
-  
-        init: function () {
-          this.setParameters();
-          this.reconstructMethod();
-          this.createSnow(this.SNOW_COUNT.INIT * this.countRate, true);
-          this.render();
-        },
-        setParameters: function () {
-          this.$window = $(window);
-  
-          this.$container = $('#jsi-snow-container');
-          this.width = this.$container.width();
-          this.height = this.$container.height();
-          this.center = { x: this.width / 2, y: this.height / 2 };
-          this.countRate = this.width * this.height / 500 / 500;
-          this.canvas = $('<canvas />').attr({ width: this.width, height: this.height }).appendTo(this.$container).get(0);
-          this.context = this.canvas.getContext('2d');
-  
-          this.radius = Math.sqrt(this.center.x * this.center.x + this.center.y * this.center.y);
-          this.hue = this.INIT_HUE;
-          this.snows = [];
-        },
-        reconstructMethod: function () {
-          this.render = this.render.bind(this);
-        },
-        createSnow: function (count, toRandomize) {
-          for (var i = 0; i < count; i++) {
-            this.snows.push(new SNOW(this.width, this.height, this.center, toRandomize));
-          }
-        },
-        render: function () {
-          requestAnimationFrame(this.render);
-  
-          var gradient = this.context.createRadialGradient(this.center.x, this.center.y, 0, this.center.x, this.center.y, this.radius),
-            backgroundColor = this.BACKGROUND_COLOR.replace('%h', this.hue);
-  
-          gradient.addColorStop(0, backgroundColor.replace('%l', 30));
-          gradient.addColorStop(0.2, backgroundColor.replace('%l', 20));
-          gradient.addColorStop(1, backgroundColor.replace('%l', 5));
-  
-          this.context.fillStyle = gradient;
-          this.context.fillRect(0, 0, this.width, this.height);
-  
-          for (var i = this.snows.length - 1; i >= 0; i--) {
-            if (!this.snows[i].render(this.context)) {
-              this.snows.splice(i, 1);
-            }
-          }
-          this.hue += this.DELTA_HUE;
-          this.hue %= 360;
-  
-          this.createSnow(this.SNOW_COUNT.DELTA, false);
-        }
-      };
-      var SNOW = function (width, height, center, toRandomize) {
-        this.width = width;
-        this.height = height;
-        this.center = center;
-        this.init(toRandomize);
-      };
-      SNOW.prototype = {
-        RADIUS: 20,
-        OFFSET: 4,
-        INIT_POSITION_MARGIN: 20,
-        COLOR: 'rgba(255, 255, 255, 0.8)',
-        TOP_RADIUS: { MIN: 1, MAX: 3 },
-        SCALE: { INIT: 0.04, DELTA: 0.01 },
-        DELTA_ROTATE: { MIN: -Math.PI / 180 / 2, MAX: Math.PI / 180 / 2 },
-        THRESHOLD_TRANSPARENCY: 0.7,
-        VELOCITY: { MIN: -1, MAX: 1 },
-        LINE_WIDTH: 2,
-        BLUR: 10,
-  
-        init: function (toRandomize) {
-          this.setParameters(toRandomize);
-          this.createSnow();
-        },
-        setParameters: function (toRandomize) {
-          if (!this.canvas) {
-            this.radius = this.RADIUS + this.TOP_RADIUS.MAX * 2 + this.LINE_WIDTH;
-            this.length = this.radius * 2;
-            this.canvas = $('<canvas />').attr({ width: this.length, height: this.length }).get(0);
-            this.context = this.canvas.getContext('2d');
-          }
-          this.topRadius = this.getRandomValue(this.TOP_RADIUS);
-  
-          var theta = Math.PI * 2 * Math.random();
-  
-          this.x = this.center.x + this.INIT_POSITION_MARGIN * Math.cos(theta);
-          this.y = this.center.y + this.INIT_POSITION_MARGIN * Math.sin(theta);
-          this.vx = this.getRandomValue(this.VELOCITY);
-          this.vy = this.getRandomValue(this.VELOCITY);
-  
-          this.deltaRotate = this.getRandomValue(this.DELTA_ROTATE);
-          this.scale = this.SCALE.INIT;
-          this.deltaScale = 1 + this.SCALE.DELTA * 500 / Math.max(this.width, this.height);
-          this.rotate = 0;
-  
-          if (toRandomize) {
-            for (var i = 0, count = Math.random() * 1000; i < count; i++) {
-              this.x += this.vx;
-              this.y += this.vy;
-              this.scale *= this.deltaScale;
-              this.rotate += this.deltaRotate;
-            }
-          }
-        },
-        getRandomValue: function (range) {
-          return range.MIN + (range.MAX - range.MIN) * Math.random();
-        },
-        createSnow: function () {
-          this.context.clearRect(0, 0, this.length, this.length);
-  
-          this.context.save();
-          this.context.beginPath();
-          this.context.translate(this.radius, this.radius);
-          this.context.strokeStyle = this.COLOR;
-          this.context.lineWidth = this.LINE_WIDTH;
-          this.context.shadowColor = this.COLOR;
-          this.context.shadowBlur = this.BLUR;
-  
-          var angle60 = Math.PI / 180 * 60,
-            sin60 = Math.sin(angle60),
-            cos60 = Math.cos(angle60),
-            threshold = Math.random() * this.RADIUS / this.OFFSET | 0,
-            rate = 0.5 + Math.random() * 0.5,
-            offsetY = this.OFFSET * Math.random() * 2,
-            offsetCount = this.RADIUS / this.OFFSET;
-  
-          for (var i = 0; i < 6; i++) {
-            this.context.save();
-            this.context.rotate(angle60 * i);
-  
-            for (var j = 0; j <= threshold; j++) {
-              var y = -this.OFFSET * j;
-  
-              this.context.moveTo(0, y);
-              this.context.lineTo(y * sin60, y * cos60);
-            }
-            for (var j = threshold; j < offsetCount; j++) {
-              var y = -this.OFFSET * j,
-                x = j * (offsetCount - j + 1) * rate;
-  
-              this.context.moveTo(x, y - offsetY);
-              this.context.lineTo(0, y);
-              this.context.lineTo(-x, y - offsetY);
-            }
-            this.context.moveTo(0, 0);
-            this.context.lineTo(0, -this.RADIUS);
-            this.context.arc(0, -this.RADIUS - this.topRadius, this.topRadius, Math.PI / 2, Math.PI * 2.5, false);
-            this.context.restore();
-          }
-          this.context.stroke();
-          this.context.restore();
-        },
-        render: function (context) {
-          context.save();
-  
-          if (this.scale > this.THRESHOLD_TRANSPARENCY) {
-            context.globalAlpha = Math.max(0, (1 - this.scale) / (1 - this.THRESHOLD_TRANSPARENCY));
-  
-            if (this.scale > 1 || this.x < -this.radius || this.x > this.width + this.radius || this.y < -this.radius || this.y > this.height + this.radius) {
-              context.restore();
-              return false;
-            }
-          }
-          context.translate(this.x, this.y);
-          context.rotate(this.rotate);
-          context.scale(this.scale, this.scale);
-          context.drawImage(this.canvas, -this.radius, -this.radius);
-          context.restore();
-  
-          this.x += this.vx;
-          this.y += this.vy;
-          this.scale *= this.deltaScale;
-          this.rotate += this.deltaRotate;
-          return true;
-        }
-      };
-  
-      $(function () {
-        RENDERER.init();
-      });
-    </script>
   <!-- 页面点击小红心 -->
   <script type="text/javascript" src="https://wang926454.gitee.io/reader/JS/love.js"></script>
   <script type="text/javascript" src="https://wang64.cn/static/count.js"></script>
+
+  <script>
+    // Code by Matheus Lin
+    // While developing a version of "Chain Reaction", I ended up on
+    // those "fireworks-like" things. I leave it to you here.
+    // Chain Reaction coming up next!
+
+    // Configs
+
+    var screenWidth = window.innerWidth;
+    var screenHeight = window.innerHeight;
+
+    var minVx = -10;
+    var deltaVx = 20;
+    var minVy = 25
+    var deltaVy = 15;
+    var minParticleV = 5;
+    var deltaParticleV = 5;
+
+    var gravity = 1;
+
+    var explosionRadius = 200;
+    var bombRadius = 10;
+    var explodingDuration = 100;
+    var explosionDividerFactor = 10; // I couldn't find a better name. Got any?
+
+    var nBombs = 1; // initial
+    var percentChanceNewBomb = 5;
+
+    // Color utils forked from http://andreasstorm.com/
+    // (or someone who forked from there)
+
+    function Color(min) {
+      min = min || 0;
+      this.r = colorValue(min);
+      this.g = colorValue(min);
+      this.b = colorValue(min);
+      this.style = createColorStyle(this.r, this.g, this.b);
+    };
+
+    function colorValue(min) {
+      return Math.floor(Math.random() * 255 + min);
+    }
+
+    function createColorStyle(r, g, b) {
+      return 'rgba(' + r + ',' + g + ',' + b + ', 0.8)';
+    }
+
+    // A Bomb. Or firework.
+    function Bomb() {
+      var self = this;
+
+      self.radius = bombRadius;
+      self.previousRadius = bombRadius;
+      self.explodingDuration = explodingDuration;
+      self.hasExploded = false;
+      self.alive = true;
+      self.color = new Color();
+
+      self.px = (window.innerWidth / 4) + (Math.random() * window.innerWidth / 2);
+      self.py = window.innerHeight;
+
+      self.vx = minVx + Math.random() * deltaVx;
+      self.vy = (minVy + Math.random() * deltaVy) * -1; // because y grows downwards
+
+      self.duration =
+
+        self.update = function (particlesVector) {
+          if (self.hasExploded) {
+            var deltaRadius = explosionRadius - self.radius;
+            self.previousRadius = self.radius;
+            self.radius += deltaRadius / explosionDividerFactor;
+            self.explodingDuration--;
+            if (self.explodingDuration == 0) {
+              self.alive = false;
+            }
+          }
+          else {
+            self.vx += 0;
+            self.vy += gravity;
+            if (self.vy >= 0) { // invertion point
+              self.explode(particlesVector);
+            }
+
+            self.px += self.vx;
+            self.py += self.vy;
+          }
+        };
+
+      self.draw = function (ctx) {
+        ctx.beginPath();
+        ctx.arc(self.px, self.py, self.previousRadius, 0, Math.PI * 2, false);
+        if (self.hasExploded) {
+        }
+        else {
+          ctx.fillStyle = self.color.style;
+          ctx.lineWidth = 1;
+          ctx.fill();
+        }
+      };
+
+      self.explode = function (particlesVector) {
+        self.hasExploded = true;
+        var e = 3 + Math.floor(Math.random() * 3);
+        for (var j = 0; j < e; j++) {
+          var n = 10 + Math.floor(Math.random() * 21); // 10 - 30
+          var speed = minParticleV + Math.random() * deltaParticleV;
+          var deltaAngle = 2 * Math.PI / n;
+          var initialAngle = Math.random() * deltaAngle;
+          for (var i = 0; i < n; i++) {
+            particlesVector.push(new Particle(self, i * deltaAngle + initialAngle, speed));
+          }
+        }
+      };
+    }
+
+    function Particle(parent, angle, speed) {
+      var self = this;
+      self.px = parent.px;
+      self.py = parent.py;
+      self.vx = Math.cos(angle) * speed;
+      self.vy = Math.sin(angle) * speed;
+      self.color = parent.color;
+      self.duration = 40 + Math.floor(Math.random() * 20);
+      self.alive = true;
+
+      self.update = function () {
+        self.vx += 0;
+        self.vy += gravity / 10;
+
+        self.px += self.vx;
+        self.py += self.vy;
+        self.radius = 3;
+
+        self.duration--;
+        if (self.duration <= 0) {
+          self.alive = false;
+        }
+      };
+
+      self.draw = function (ctx) {
+        ctx.beginPath();
+        ctx.arc(self.px, self.py, self.radius, 0, Math.PI * 2, false);
+        ctx.fillStyle = self.color.style;
+        ctx.lineWidth = 1;
+        ctx.fill();
+      };
+    }
+
+    function Controller() {
+      var self = this;
+      self.canvas = document.getElementById("screen");
+      self.canvas.width = screenWidth;
+      self.canvas.height = screenHeight;
+      self.ctx = self.canvas.getContext('2d');
+
+      function setSpeedParams() {
+        var heightReached = 0;
+        var vy = 0;
+
+        while (heightReached < screenHeight && vy >= 0) {
+          vy += gravity;
+          heightReached += vy;
+        }
+
+        minVy = vy / 2;
+        deltaVy = vy - minVy;
+
+        vx = (1 / 4) * screenWidth / (vy / 2);
+        minVx = -vx;
+        deltaVx = 2 * vx;
+      };
+
+      self.resize = function () {
+        screenWidth = window.innerWidth;
+        screenHeight = window.innerHeight;
+        self.canvas.width = screenWidth;
+        self.canvas.height = screenHeight;
+        setSpeedParams();
+      };
+      self.resize();
+
+      window.onresize = self.resize;
+
+      self.init = function () {
+        self.readyBombs = [];
+        self.explodedBombs = [];
+        self.particles = [];
+
+        for (var i = 0; i < nBombs; i++) {
+          self.readyBombs.push(new Bomb());
+        }
+      }
+
+      self.update = function () {
+        var aliveBombs = [];
+        while (self.explodedBombs.length > 0) {
+          var bomb = self.explodedBombs.shift();
+          bomb.update();
+          if (bomb.alive) {
+            aliveBombs.push(bomb);
+          }
+        }
+        self.explodedBombs = aliveBombs;
+
+        var notExplodedBombs = [];
+        while (self.readyBombs.length > 0) {
+          var bomb = self.readyBombs.shift();
+          bomb.update(self.particles);
+          if (bomb.hasExploded) {
+            self.explodedBombs.push(bomb);
+          }
+          else {
+            notExplodedBombs.push(bomb);
+          }
+        }
+        self.readyBombs = notExplodedBombs;
+
+        var aliveParticles = [];
+        while (self.particles.length > 0) {
+          var particle = self.particles.shift();
+          particle.update();
+          if (particle.alive) {
+            aliveParticles.push(particle);
+          }
+        }
+        self.particles = aliveParticles;
+      }
+
+      self.draw = function () {
+        self.ctx.beginPath();
+        self.ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; // Ghostly effect
+        self.ctx.fillRect(0, 0, self.canvas.width, self.canvas.height);
+
+        for (var i = 0; i < self.readyBombs.length; i++) {
+          self.readyBombs[i].draw(self.ctx);
+        }
+
+        for (var i = 0; i < self.explodedBombs.length; i++) {
+          self.explodedBombs[i].draw(self.ctx);
+        }
+
+        for (var i = 0; i < self.particles.length; i++) {
+          self.particles[i].draw(self.ctx);
+        }
+
+      }
+
+      self.animation = function () {
+        self.update();
+        self.draw();
+
+        if (Math.random() * 100 < percentChanceNewBomb) {
+          self.readyBombs.push(new Bomb());
+        }
+        requestAnimationFrame(self.animation);
+      }
+    }
+
+    var controller = new Controller();
+    controller.init();
+    requestAnimationFrame(controller.animation);
+  </script>
+
 </body>
 
 </html>
