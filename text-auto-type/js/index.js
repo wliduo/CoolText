@@ -43,7 +43,7 @@ var arr = [
     { type: 'wait', time: 900 },
     { type: 'br' },
     { type: 'text', text: '嗯，想了一下，还是算了~毕竟我根本没有，想想就好了！' }
-    /* { type: 'img', src: 'https://wang926454.gitee.io/reader/Image/headt.png', id: "cat", style: "width: 100px;display: block;margin-left: auto;margin-right: auto;margin-top: 20px;margin-bottom: 20px;" }, */
+    /* { type: 'img', src: 'https://dolyw.gitee.io/reader/Image/headt.png', id: "cat", style: "width: 100px;display: block;margin-left: auto;margin-right: auto;margin-top: 20px;margin-bottom: 20px;" }, */
 ]
 
 var autoType = new AutoType(content, arr);
