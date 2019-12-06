@@ -1,18 +1,45 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>12-炫酷文字特效</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap-theme.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wliduo/CoolText@master/typing/css/typing.css">
-    <!-- Icons --><link rel="shortcut icon" href="https://dolyw.com/static/favicon.ico">
+    <!-- Icons -->
+    <link rel="shortcut icon" href="https://dolyw.com/static/favicon.ico">
     <style>
-		body {
+        /* body {
 			background: #282828;
-		}
+		} */
+        #bg,
+        body {
+            height: 100%;
+            background-size: cover;
+        }
+
+        #bg {
+            -webkit-filter: brightness(0.9);
+            -ms-filter: brightness(0.9);
+            -moz-filter: brightness(0.9);
+            filter: brightness(0.9);
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: -10;
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-position: center center;
+            /* background-image: url(https://cdn.jsdelivr.net/gh/wliduo/CDN@master/wallpaper/201911/20191129005.png); */
+            background-image: url(https://cdn.jsdelivr.net/gh/wliduo/CDN@master/wallpaper/201912/20191204005.jpg);
+        }
+
         .row {
             margin-top: 12px;
         }
@@ -33,28 +60,37 @@
             color: #2d61e2;
         }
 
-        #source, #output-wrap {
+        #source,
+        #output-wrap {
             height: 160px;
-            background: #282828;
+            /* background: #282828; */
             color: #fff;
             padding: 20px;
-            font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+            font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
             font-size: 18px;
             line-height: 26px;
         }
 
         @media screen and (max-width: 650px) {
-            #source, #output-wrap {
+
+            #source,
+            #output-wrap {
                 font-size: 16px;
             }
         }
+
         @media screen and (max-width: 550px) {
-            #source, #output-wrap {
+
+            #source,
+            #output-wrap {
                 font-size: 14px;
             }
         }
+
         @media screen and (max-width: 430px) {
-            #source, #output-wrap {
+
+            #source,
+            #output-wrap {
                 font-size: 12px;
             }
         }
@@ -62,7 +98,9 @@
     <script src="https://cdn.jsdelivr.net/gh/wliduo/CoolText@master/typing/js/typing.js"></script>
 </head>
 <!-- 源码 https://github.com/coffeedeveloper/typing.js -->
+
 <body>
+    <div id="bg"></div>
     <div class="container-fluid">
         <div class="row">
             <!-- <div class="col-md-12 col-sm-12 col-xs-12" style="display: none;">
@@ -78,14 +116,16 @@
                     HelloWorld.java<br>
                     ------------------------------------------<br>
                     <span class="func">public class </span><span class="string">HelloWorld </span>{<br>
-                    <span class="func">&nbsp;&nbsp;public static </span>void <span class="info">main</span>(String[] <span class="string">args</span>) {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="info">System.out.println</span>("<span class="string">Hello World</span>");<br>
+                    <span class="func">&nbsp;&nbsp;public static </span>void <span class="info">main</span>(String[]
+                    <span class="string">args</span>) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="info">System.out.println</span>("<span class="string">Hello
+                        World</span>");<br>
                     &nbsp;&nbsp;}<br>
                     }<br>
                     ------------------------------------------<br>>
-                     <span class="keyword">javac HelloWorld.java</span><br>>
-                     <span class="keyword">java HelloWorld</span><br>>
-                     <span class="info">Hello World</span><br>>
+                    <span class="keyword">javac HelloWorld.java</span><br>>
+                    <span class="keyword">java HelloWorld</span><br>>
+                    <span class="info">Hello World</span><br>>
                 </div>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -106,4 +146,5 @@
     </script>
     <script type="text/javascript" src="https://dolyw.com/static/count.js"></script>
 </body>
+
 </html>
